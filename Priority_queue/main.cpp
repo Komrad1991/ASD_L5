@@ -133,7 +133,7 @@ int main()
 		}
 		high_resolution_clock::time_point t2 = high_resolution_clock::now();
 		duration += std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
-		std::cout << "myBin big.txt time and word: " << duration << " " << standart.top() << std::endl;
+		std::cout << "std big.txt time and word: " << duration << " " << standart.top() << std::endl;
 	}
 	{
 		long long duration = 0;

@@ -74,17 +74,17 @@ class myBinQueue
     Cont myCont;
 public:
     myBinQueue(Cont c = Cont(), Comp cmp = Comp()) :myComp(cmp), myCont(c)
-    {
-        for (size_t i = myCont.size(); i >= 0; i--)
-        {
-            sift_down(i);
-        }
+    { 
+            for (int i = myCont.size() - 1; i >= 0; i--)
+            {
+                sift_down(i);
+            }
     }
 
     void insert(T elem)
     {
         myCont.push_back(elem);
-        sift_up(myCont.size());
+        sift_up(myCont.size()-1);
     }
 
     T top()
